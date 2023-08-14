@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { motion } from "framer-motion"
 import { IconType } from 'react-icons';
-import { BiLogoGithub, BiLogoWhatsapp, BiLogoLinkedin, BiLogoGmail } from 'react-icons/bi'
+import { BiLogoGithub, BiLogoWhatsapp, BiLogoLinkedin, BiLogoGmail, BiLogoDiscord } from 'react-icons/bi'
 import { Tooltip, Typography } from '@material-tailwind/react';
 
 type Props = {}
@@ -26,10 +26,10 @@ const iconList: IconListItem[] = [
         url: 'https://www.linkedin.com/in/zufar-handito-38537219b/'
     },
     {
-        name: 'Whatsapp',
-        icon: BiLogoWhatsapp,
+        name: 'Discord',
+        icon: BiLogoDiscord,
         url: 'https://wa.me/6281225740363'
-    }
+    },
 ]
 
 export default function SocialIcons({ }: Props) {
@@ -45,7 +45,7 @@ export default function SocialIcons({ }: Props) {
                             color="light-blue"
                             textGradient
                         >
-                            {React.createElement(icon.icon as IconType, { className: "w-5 h-5 text-black" })}
+                            {React.createElement(icon.icon as IconType, { className: "w-6 h-6 text-white" })}
                         </Typography>
                     </Tooltip>
                 ))

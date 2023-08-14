@@ -37,7 +37,7 @@ const data: DataType[] = [
 
 export default function Experiences({ }: Props) {
     return (
-        <div className="max-w-7xl px-20">
+        <article className="max-w-7xl px-20 min-h-screen flex flex-col items-center justify-center ">
             <Typography variant="h5" className="my-7 text-center">
                 Experiences
             </Typography>
@@ -58,7 +58,7 @@ export default function Experiences({ }: Props) {
                             }}
                             viewport={{ once: true }}
                             key={index}>
-                            <TimelineItem>
+                            <TimelineItem key={index}>
                                 {(index === data.length - 1 ? '' : <TimelineConnector />)}
                                 <TimelineHeader className="h-3">
                                     <TimelineIcon />
@@ -75,7 +75,7 @@ export default function Experiences({ }: Props) {
                                     <Typography variant="paragraph" color="gray" className="italic" >
                                         {item.company}
                                     </Typography>
-                                    <Typography variant="small" color="gary" className="font-normal text-gray-600">
+                                    <Typography variant="small" color="gray" className="font-normal text-gray-600">
                                         {item.desc}
                                     </Typography>
                                 </TimelineBody>
@@ -84,6 +84,6 @@ export default function Experiences({ }: Props) {
                     ))
                 }
             </Timeline>
-        </div>
+        </article>
     )
 }
