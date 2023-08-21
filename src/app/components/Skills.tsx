@@ -69,8 +69,8 @@ const animateMotion = {
 
 export default function Skills({ }: Props) {
     return (
-        <motion.div
-            className='h-screen relative flex flex-col text-center items-center justify-center gap-7 max-w-7xl'>
+        <div
+            className='h-screen relative flex flex-col text-center items-center justify-center gap-7 px-14 max-w-7xl'>
             <motion.span
                 variants={animateMotion}
                 initial="initial"
@@ -103,6 +103,6 @@ export default function Skills({ }: Props) {
                     ))
                 }
             </div>
-        </motion.div>
+        </div>
     )
 }

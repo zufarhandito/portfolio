@@ -23,9 +23,15 @@ type DataType = {
 const data: DataType[] = [
     {
         title: 'In-Game Designer',
-        company: 'Meraki Studios',
+        company: 'Meraki Studios (freelance)',
         date: '2018 - 2021',
         desc: 'I Created Minecraft assets based on clients requested....'
+    },
+    {
+        title: 'Graduated',
+        company: 'Universitas Islam Indonesia',
+        date: '2023',
+        desc: 'I graduated from Universitas Islam Indonesia'
     },
     {
         title: 'Intensive Bootcamp',
@@ -37,8 +43,11 @@ const data: DataType[] = [
 
 export default function Experiences({ }: Props) {
     return (
-        <article className="max-w-7xl px-20 min-h-screen flex flex-col items-center justify-center ">
-            <Typography variant="h5" className="my-7 text-center">
+        <article className="max-w-7xl px-14 mb-44 flex flex-col items-center justify-center ">
+            <Typography variant="h5" className="mt-14 text-center">
+                Events &
+            </Typography>
+            <Typography variant="h5" className="mb-14 text-center">
                 Experiences
             </Typography>
             <Timeline>
@@ -84,6 +93,7 @@ export default function Experiences({ }: Props) {
                     ))
                 }
             </Timeline>
+
         </article>
     )
 }

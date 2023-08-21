@@ -16,7 +16,7 @@ type Props = {}
 export default function About({ }: Props) {
     return (
         <div className='h-screen flex items-center max-w-7xl justify-evenly'>
-            <Card className='shadow-none text-center md:text-left flex flex-col md:flex-row items-center px-10'>
+            <Card className='shadow-none text-center md:text-left flex flex-col md:flex-row items-center px-8'>
                 <motion.img
                     initial={{
                         x: -200,
