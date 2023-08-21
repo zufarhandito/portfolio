@@ -69,40 +69,41 @@ const animateMotion = {
 
 export default function Skills({ }: Props) {
     return (
-        <div
-            className='h-screen relative flex flex-col text-center items-center justify-center gap-7 px-14 max-w-7xl'>
-            <motion.span
-                variants={animateMotion}
-                initial="initial"
-                whileInView="inView"
-                viewport={{ once: true }}
-            >
-                <Typography variant='h5'>
-                    Skills
-                </Typography>
-                <Typography variant="paragraph" >
-                    I use several tech stacks, including but not limited to
-                </Typography>
-            </motion.span>
-            <div className='grid grid-cols-4 gap-11'>
-                {
-                    Items.map((item, index) => (
-                        <motion.span
-                            variants={animateMotion}
-                            initial="initial"
-                            whileInView="inView"
-                            transition={{
-                                delay: index * 0.08
-                            }}
-                            viewport={{ once: true }}
-                            key={index}>
-                            <Tooltip content={item.name}>
-                                <Image key={index} alt={'icon' + index} src={item.icon} width={40} height={40} className='filter grayscale hover:grayscale-0 transition-all duration-300' />
-                            </Tooltip>
-                        </motion.span>
-                    ))
-                }
-            </div>
-        </div>
+        <div className='bg-red-200 h-screen'>anjay</div>
+        // <div
+        //     className='h-screen flex flex-col text-center items-center justify-center gap-7 px-14 max-w-7xl'>
+        //     <motion.div
+        //         variants={animateMotion}
+        //         initial="initial"
+        //         whileInView="inView"
+        //         viewport={{ once: true }}
+        //     >
+        //         <Typography variant='h5'>
+        //             Skills
+        //         </Typography>
+        //         <Typography variant="paragraph" >
+        //             I use several tech stacks, including but not limited to
+        //         </Typography>
+        //     </motion.div>
+        //     <div className='grid grid-cols-4 gap-11'>
+        //         {
+        //             Items.map((item, index) => (
+        //                 <motion.span
+        //                     variants={animateMotion}
+        //                     initial="initial"
+        //                     whileInView="inView"
+        //                     transition={{
+        //                         delay: index * 0.08
+        //                     }}
+        //                     viewport={{ once: true }}
+        //                     key={index}>
+        //                     <Tooltip content={item.name}>
+        //                         <Image key={index} alt={'icon' + index} src={item.icon} width={40} height={40} className='filter grayscale hover:grayscale-0 transition-all duration-300' />
+        //                     </Tooltip>
+        //                 </motion.span>
+        //             ))
+        //         }
+        //     </div>
+        // </div>
     )
 }

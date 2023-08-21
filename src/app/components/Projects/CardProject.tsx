@@ -19,7 +19,7 @@ type Props = {
 
 export default function CardProject({ title, desc, image, category }: Props) {
     return (
-        <Card className="flex-col md:flex-row shadow-none text-start rounded-none ">
+        <Card className=" flex-col md:flex-row shadow-none text-start rounded-none ">
             <CardHeader
                 shadow={false}
                 className='rounded-none pl-2'

@@ -37,9 +37,9 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <section id='footer'>
+      {/* <section id='footer'>
         <Footer />
-      </section>
+      </section> */}
     </div>
   )
 }

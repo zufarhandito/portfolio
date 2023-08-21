@@ -67,7 +67,7 @@ export default function Experiences({ }: Props) {
                             }}
                             viewport={{ once: true }}
                             key={index}>
-                            <TimelineItem key={index}>
+                            <TimelineItem>
                                 {(index === data.length - 1 ? '' : <TimelineConnector />)}
                                 <TimelineHeader className="h-3">
                                     <TimelineIcon />

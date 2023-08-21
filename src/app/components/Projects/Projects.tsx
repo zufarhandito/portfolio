@@ -38,7 +38,7 @@ const data: DataType[] = [
 export default function Projects({ }: Props) {
     return (
         <div className=' text-center min-h-screen flex flex-col justify-center px-7'>
-            <motion.span
+            <motion.div
                 initial={{
                     y: -30,
                     opacity: 0,
@@ -54,21 +54,29 @@ export default function Projects({ }: Props) {
                 <Typography variant="h5" >
                     Highlighted Projects
                 </Typography>
-            </motion.span>
-            <br />
-            <Divider />
+                <br />
+                <Divider />
+            </motion.div>
             <div>
                 {
                     data.map((item, index) => (
-                        <motion.span
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ delay: index * 0.1, duration: 1 }}
+                        <motion.div
+                            initial={{
+                                opacity: 0,
+                                x: -100
+                            }}
+                            whileInView={{
+                                opacity: 1,
+                                x: 0
+                            }}
+                            transition={{
+                                delay: index * 0.2
+                            }}
                             viewport={{ once: true }}
                             key={index}>
                             <CardProject title={item.title} desc={item.desc} image={item.image} category={item.category} />
                             {index === data.length - 1 ? "" : <Divider />}
-                        </motion.span>
+                        </motion.div>
                     ))
                 }
                 <Button className="rounded-none shadow-none hover:shadow-none bg-gray-900 ">
