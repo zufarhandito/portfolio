@@ -10,6 +10,7 @@ import {
     Typography,
 } from "@material-tailwind/react";
 import { motion } from 'framer-motion';
+import Title from './Title';
 
 type Props = {}
 
@@ -43,13 +44,8 @@ const data: DataType[] = [
 
 export default function Experiences({ }: Props) {
     return (
-        <article className="max-w-7xl px-14 mb-44 flex flex-col items-center justify-center ">
-            <Typography variant="h5" className="mt-14 text-center">
-                Events &
-            </Typography>
-            <Typography variant="h5" className="mb-14 text-center">
-                Experiences
-            </Typography>
+        <article className="max-w-7xl ml-auto px-14 mb-44 flex flex-col items-center justify-center ">
+            <Title title='Events & Experiences'/>
             <Timeline>
                 {
                     data.map((item, index) => (

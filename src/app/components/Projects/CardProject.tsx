@@ -7,25 +7,28 @@ import {
     CardBody,
     Typography,
     Avatar,
+    Chip,
 } from "@material-tailwind/react";
 import Link from 'next/link';
+import { HiFire } from 'react-icons/hi';
 
 type Props = {
     title: string;
     desc: string;
     image: string;
     category: string;
+    isHot: boolean;
 }
 
-export default function CardProject({ title, desc, image, category }: Props) {
+export default function CardProject({ title, desc, image, category, isHot }: Props) {
     return (
-        <Card className=" flex-col md:flex-row shadow-none text-start rounded-none ">
+        <Card className="flex-col shadow-none text-start rounded-none ">
             <CardHeader
                 shadow={false}
                 className='rounded-none pl-2'
                 floated={false}
             >
-                <Link href={""}>
+                <Link href={""} >
                     <Image
                         width={300}
                         height={100}
@@ -40,7 +43,7 @@ export default function CardProject({ title, desc, image, category }: Props) {
                     {category}
                 </Typography>
                 <Typography variant="h5" color="blue-gray" className="mb-2">
-                    <Link href={""}>{title}</Link>
+                    <Link href={""} className='flex items-center'>  {isHot? <HiFire className="w-5 h-5 text-orange-900" />:''} {title}</Link>
                 </Typography>
                 <Typography color="gray" className="mb-8">
                     <Link href={""}>{desc}</Link>

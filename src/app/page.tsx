@@ -8,13 +8,15 @@ import Footer from './components/Footer'
 
 export default function Home() {
   return (
-    <div className='bg-slate-800 text-slate-200'>
+    <div className='overflow-x-hidden bg-slate-800 text-slate-200 flex flex-col items-center'>
       {/* <LanguageSwitcher /> */}
 
-      {/* Hero */}
+        {/* Hero */}
       <section id='hero'>
         <Hero />
       </section>
+
+      <article className=' max-w-5xl flex flex-col'>
 
       {/* About */}
       <section id='about'>
@@ -36,10 +38,11 @@ export default function Home() {
         <Skills />
       </section>
 
+      </article>
       {/* Footer */}
-      {/* <section id='footer'>
+      <section id='footer'>
         <Footer />
-      </section> */}
+      </section>
     </div>
   )
 }

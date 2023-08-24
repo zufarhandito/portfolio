@@ -1,9 +1,8 @@
 'use client'
-import Link from 'next/link'
+
 import React from 'react'
-import { motion } from "framer-motion"
 import { IconType } from 'react-icons';
-import { BiLogoGithub, BiLogoWhatsapp, BiLogoLinkedin, BiLogoGmail, BiLogoDiscord } from 'react-icons/bi'
+import { BiLogoGithub, BiLogoLinkedin, BiLogoGmail} from 'react-icons/bi'
 import { Tooltip, Typography } from '@material-tailwind/react';
 
 type Props = {}
@@ -26,9 +25,9 @@ const iconList: IconListItem[] = [
         url: 'https://www.linkedin.com/in/zufar-handito-38537219b/'
     },
     {
-        name: 'Discord',
-        icon: BiLogoDiscord,
-        url: 'https://wa.me/6281225740363'
+        name: 'Gmail (zufarhandito@gmail.com)',
+        icon: BiLogoGmail,
+        url: 'https://mail.google.com/mail/u/0/?fs=1&to=zufarhandito@gmail.com&su=Your%20Subject&body=Your%20Messages&tf=cm'
     },
 ]
 

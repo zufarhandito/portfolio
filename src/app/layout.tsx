@@ -1,13 +1,15 @@
 import './globals.css'
 import type { Metadata } from 'next'
-// import { Inter } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { Roboto } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
 import { ThemeProvider } from "@material-tailwind/react";
 
-const roboto = Roboto({
-  weight: '400',
+const inter = Inter({
+  // weight: '400',
+  // style: ['normal'],
   subsets: ['latin'],
-  display: 'swap',
+  // display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -22,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }

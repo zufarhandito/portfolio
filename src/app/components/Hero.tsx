@@ -1,21 +1,20 @@
 'use client'
-import Image from 'next/image'
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import SocialIcons from './SocialIcons'
 import TypingAnimation from './TypingAnimation'
-import Menus from './Menus'
 import { HiChevronDown } from 'react-icons/hi'
-import { Avatar, Typography } from '@material-tailwind/react'
+import { Avatar, Typography, Collapse, Button, Card, CardBody } from '@material-tailwind/react'
 import Link from 'next/link'
 
 type Props = {}
 
 export default function Hero({ }: Props) {
     const [text, setText] = useState("zufarhandito")
+    const [open, setOpen] = useState(false)
 
     return (
-        <header className='h-screen text-center justify-center flex items-center bg-gray-900'>
+        <header className='h-screen text-center w-screen justify-center flex items-center bg-gray-900'>
             <span>
                 <Avatar
                     src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
@@ -39,6 +38,16 @@ export default function Hero({ }: Props) {
                     Software Engineer
                 </Typography>
                 <SocialIcons />
+                    <Collapse open={open}>
+                        <Card className="my-4 mx-auto w-8/12">
+                        <CardBody>
+                            <Typography>
+                            Use our Tailwind CSS collapse for your website. You can use if for
+                            accordion, collapsible items and much more.
+                            </Typography>
+                        </CardBody>
+                        </Card>
+                    </Collapse>
             </span>
             <button className='absolute bottom-5 flex flex-col items-center'>
                 <Typography color="white" className="mb-1 font-normal">
