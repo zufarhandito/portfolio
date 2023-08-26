@@ -2,9 +2,8 @@
 import React from 'react'
 import CardProject from './CardProject'
 import { motion } from 'framer-motion'
-import { Button, Card, Typography } from '@material-tailwind/react'
+import { Button, Typography } from '@material-tailwind/react'
 import Divider from './Divider'
-import Title from '../Title'
 
 type Props = {}
 
@@ -45,11 +44,25 @@ const data: DataType[] = [
         isHot: false,
         image: "/oo.jpg"
     },
+    {
+        title: "Sistem Pakar Ibu Hamil",
+        desc: "Sistem Pakar elama masa kehamilan",
+        category: 'Expert System',
+        isHot: false,
+        image: "/oo.jpg"
+    },
+    {
+        title: "Sistem Pakar Ibu Hamil",
+        desc: "Sistem Pakar elama masa kehamilan",
+        category: 'Expert System',
+        isHot: false,
+        image: "/oo.jpg"
+    },
 ]
 
 export default function Projects({ }: Props) {
     return (
-        <div className='text-center min-h-screen flex flex-col justify-center px-7'>
+        <div className='flex flex-col justify-center px-7 lg:px-0'>
             <motion.div
                 initial={{
                     y: -30,
@@ -63,10 +76,15 @@ export default function Projects({ }: Props) {
                     once: true
                 }}
             >
-                <Title title='Highlighted Projects'/>
+                <div className='flex items-center mb-9 justify-between border-gray-900'>
+                    <Typography variant="h5" className="font-extrabold">Highlighted Projects</Typography>
+                    <Button className="rounded-none">
+                        more projects
+                    </Button>
+                </div>
                 <Divider />
             </motion.div>
-            <div className='grid grid-cols-1 lg:grid-cols-3'>
+            <div className='grid grid-cols-1 gap-5 lg:grid-cols-3'>
                 {
                     data.map((item, index) => (
                         <motion.div
@@ -89,9 +107,6 @@ export default function Projects({ }: Props) {
                     ))
                 }
             </div>
-                <Button className="rounded-none">
-                    more projects
-                </Button>
             <br />
         </div>
     )

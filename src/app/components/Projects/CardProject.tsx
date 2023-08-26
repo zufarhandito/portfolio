@@ -6,8 +6,6 @@ import {
     CardHeader,
     CardBody,
     Typography,
-    Avatar,
-    Chip,
 } from "@material-tailwind/react";
 import Link from 'next/link';
 import { HiFire } from 'react-icons/hi';
@@ -22,10 +20,10 @@ type Props = {
 
 export default function CardProject({ title, desc, image, category, isHot }: Props) {
     return (
-        <Card className="flex-col shadow-none text-start rounded-none ">
+        <Card className="flex-col shadow-none text-start rounded-none">
             <CardHeader
                 shadow={false}
-                className='rounded-none pl-2'
+                className='rounded-none m-0'
                 floated={false}
             >
                 <Link href={""} >
@@ -38,7 +36,7 @@ export default function CardProject({ title, desc, image, category, isHot }: Pro
                     />
                 </Link>
             </CardHeader>
-            <CardBody>
+            <CardBody className='px-0'>
                 <Typography variant="small" color="gray" className="-mt-3">
                     {category}
                 </Typography>

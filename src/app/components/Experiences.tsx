@@ -10,7 +10,7 @@ import {
     Typography,
 } from "@material-tailwind/react";
 import { motion } from 'framer-motion';
-import Title from './Title';
+import { HiArrowRight } from 'react-icons/hi';
 
 type Props = {}
 
@@ -23,10 +23,10 @@ type DataType = {
 
 const data: DataType[] = [
     {
-        title: 'In-Game Designer',
-        company: 'Meraki Studios (freelance)',
-        date: '2018 - 2021',
-        desc: 'I Created Minecraft assets based on clients requested....'
+        title: 'Intensive Bootcamp',
+        company: 'Code Id + MahakaX',
+        date: '2023 - 2023',
+        desc: 'I joined Intensive Bootcamp at CodeXAcademy for 3 months. lorem ipsum dolor sit amet ....'
     },
     {
         title: 'Graduated',
@@ -35,17 +35,37 @@ const data: DataType[] = [
         desc: 'I graduated from Universitas Islam Indonesia'
     },
     {
-        title: 'Intensive Bootcamp',
-        company: 'Code Id + MahakaX',
-        date: '2023 - 2023',
-        desc: 'I joined Intensive Bootcamp at CodeXAcademy for 3 months. lorem ipsum dolor sit amet ....'
+        title: 'In-Game Designer',
+        company: 'Meraki Studios (freelance)',
+        date: '2018 - 2021',
+        desc: 'I Created Minecraft assets based on clients requested....'
     },
 ]
 
 export default function Experiences({ }: Props) {
     return (
-        <article className="max-w-7xl ml-auto px-14 mb-44 flex flex-col items-center justify-center ">
-            <Title title='Events & Experiences'/>
+        <div className='flex flex-col md:flex-row gap-14 px-14 lg:px-0'>
+            <div className='w-full md:w-1/5 text-end text-3xl font-extrabold'>
+                <Typography variant="h3" className="font-extrabold">
+                Events and <br /> Experiences
+                </Typography>
+                <Typography variant="paragraph">
+                    These are my recent work <br /> experiences and several <br /> important moments
+                </Typography>
+                <motion.div
+                    animate={{
+                        x: [0, -10, 0],
+                    }}
+                    transition={{
+                        repeat: Infinity,
+                        duration: 2,
+                        ease: 'easeInOut',
+                    }}
+                >
+                    <HiArrowRight className="ml-auto mt-5" />
+                </motion.div>
+            </div>
+            <article className="w-full md:w-4/5 mb-44 ">
             <Timeline>
                 {
                     data.map((item, index) => (
@@ -89,7 +109,7 @@ export default function Experiences({ }: Props) {
                     ))
                 }
             </Timeline>
-
         </article>
+        </div>
     )
 }

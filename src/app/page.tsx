@@ -1,6 +1,6 @@
 import Hero from './components/Hero'
 import About from './components/About'
-import LanguageSwitcher from './components/LanguageSwitcher'
+// import LanguageSwitcher from './components/LanguageSwitcher'
 import Skills from './components/Skills'
 import Experiences from './components/Experiences'
 import Projects from './components/Projects/Projects'

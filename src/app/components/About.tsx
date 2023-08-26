@@ -59,7 +59,7 @@ export default function About({ }: Props) {
                     <div className='w-2 h-2 bg-gray-600 rounded-full'></div>
                     <div className='w-2 h-2 bg-gray-600 rounded-full'></div>
                 </div>
-                <div className='w-16 h-16 bg-gray-900 absolute bottom-0 right-0 md:inline-block rounded-tl-full hidden'></div>
+                <div className='w-16 h-16 bg-gray-900 absolute bottom-0 left-0 md:inline-block rounded-tr-full hidden'></div>
             </Card>
         </div>
 

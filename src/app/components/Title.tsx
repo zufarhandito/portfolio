@@ -10,7 +10,7 @@ type Props = {
 export default function Title({title,desc}: Props) {
   return (
     <div>
-    <Typography variant="h5" className="mt-14 text-center">
+    <Typography variant="h5" className="mt-14">
         {title}
     </Typography>
     <Typography variant="paragraph" >

@@ -1,9 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { Roboto } from 'next/font/google'
-import { Open_Sans } from 'next/font/google'
-import { ThemeProvider } from "@material-tailwind/react";
 
 const inter = Inter({
   // weight: '400',
