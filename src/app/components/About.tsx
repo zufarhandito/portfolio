@@ -6,6 +6,7 @@ import {
     Typography,
 } from "@material-tailwind/react";
 import { HiLocationMarker } from 'react-icons/hi';
+import { APP_TEXT } from '@/data/lang_id';
 
 type Props = {}
 
@@ -42,14 +43,14 @@ export default function About({ }: Props) {
                         viewport={{ once: true }}
                     >
                         <Typography variant="h5" color="blue-gray">
-                            Hi! I am Zufar Abyan Handito
+                            {APP_TEXT.BIO_TITLE}
                         </Typography>
                         <Typography variant="small" className="flex items-center gap-2 mb-3 justify-center lg:justify-start">
                             <HiLocationMarker/> 
                             Yogyakarta, Indonesia
                         </Typography>
                         <Typography variant="paragraph">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            {APP_TEXT.BIO_DESCRIPTION}
                         </Typography>
                     </motion.div>
                 </CardBody>
